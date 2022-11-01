@@ -6,18 +6,15 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public partial class GameStateContext {
 
     public GameStateEntity currentRoundEntity { get { return GetGroup(GameStateMatcher.CurrentRound).GetSingleEntity(); } }
-    public CurrentRoundComponent currentRound { get { return currentRoundEntity.currentRound; } }
+    public Components.CurrentRoundComponent currentRound { get { return currentRoundEntity.currentRound; } }
     public bool hasCurrentRound { get { return currentRoundEntity != null; } }
 
     public GameStateEntity SetCurrentRound(int newValue) {
         if (hasCurrentRound) {
-            throw new Entitas.EntitasException("Could not set CurrentRound!\n" + this + " already has an entity with Assets.Scripts.Components.CurrentRoundComponent!",
+            throw new Entitas.EntitasException("Could not set CurrentRound!\n" + this + " already has an entity with Components.CurrentRoundComponent!",
                 "You should check if the context already has a currentRoundEntity before setting it or use context.ReplaceCurrentRound().");
         }
         var entity = CreateEntity();
@@ -49,19 +46,19 @@ public partial class GameStateContext {
 //------------------------------------------------------------------------------
 public partial class GameStateEntity {
 
-    public CurrentRoundComponent currentRound { get { return (CurrentRoundComponent)GetComponent(GameStateComponentsLookup.CurrentRound); } }
+    public Components.CurrentRoundComponent currentRound { get { return (Components.CurrentRoundComponent)GetComponent(GameStateComponentsLookup.CurrentRound); } }
     public bool hasCurrentRound { get { return HasComponent(GameStateComponentsLookup.CurrentRound); } }
 
     public void AddCurrentRound(int newValue) {
         var index = GameStateComponentsLookup.CurrentRound;
-        var component = (CurrentRoundComponent)CreateComponent(index, typeof(CurrentRoundComponent));
+        var component = (Components.CurrentRoundComponent)CreateComponent(index, typeof(Components.CurrentRoundComponent));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceCurrentRound(int newValue) {
         var index = GameStateComponentsLookup.CurrentRound;
-        var component = (CurrentRoundComponent)CreateComponent(index, typeof(CurrentRoundComponent));
+        var component = (Components.CurrentRoundComponent)CreateComponent(index, typeof(Components.CurrentRoundComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

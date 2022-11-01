@@ -6,23 +6,23 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public static class InputComponentsLookup {
 
     public const int Collision = 0;
-    public const int Movement = 1;
+    public const int Input = 1;
+    public const int Movement = 2;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
         "Collision",
+        "Input",
         "Movement"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(Components.CollisionComponent),
-        typeof(MovementComponent)
+        typeof(Components.InputComponent),
+        typeof(Components.MovementComponent)
     };
 }

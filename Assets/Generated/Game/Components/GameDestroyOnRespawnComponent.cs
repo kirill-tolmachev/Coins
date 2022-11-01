@@ -6,24 +6,21 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public partial class GameEntity {
 
-    public DestroyOnRespawnComponent destroyOnRespawn { get { return (DestroyOnRespawnComponent)GetComponent(GameComponentsLookup.DestroyOnRespawn); } }
+    public Components.DestroyOnRespawnComponent destroyOnRespawn { get { return (Components.DestroyOnRespawnComponent)GetComponent(GameComponentsLookup.DestroyOnRespawn); } }
     public bool hasDestroyOnRespawn { get { return HasComponent(GameComponentsLookup.DestroyOnRespawn); } }
 
     public void AddDestroyOnRespawn(int newRound) {
         var index = GameComponentsLookup.DestroyOnRespawn;
-        var component = (DestroyOnRespawnComponent)CreateComponent(index, typeof(DestroyOnRespawnComponent));
+        var component = (Components.DestroyOnRespawnComponent)CreateComponent(index, typeof(Components.DestroyOnRespawnComponent));
         component.Round = newRound;
         AddComponent(index, component);
     }
 
     public void ReplaceDestroyOnRespawn(int newRound) {
         var index = GameComponentsLookup.DestroyOnRespawn;
-        var component = (DestroyOnRespawnComponent)CreateComponent(index, typeof(DestroyOnRespawnComponent));
+        var component = (Components.DestroyOnRespawnComponent)CreateComponent(index, typeof(Components.DestroyOnRespawnComponent));
         component.Round = newRound;
         ReplaceComponent(index, component);
     }

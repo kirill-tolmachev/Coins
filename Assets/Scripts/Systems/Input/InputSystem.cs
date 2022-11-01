@@ -11,10 +11,8 @@ namespace Systems.Input
 
         public void Execute()
         {
-            float x = UnityEngine.Input.GetAxis("Horizontal");
-            float y = UnityEngine.Input.GetAxis("Vertical");
-
-            _context.ReplaceMovement(new Vector2(x, y));
+            var input = _context.input.Input.GetInput();
+            _context.ReplaceMovement(input);
         }
     }
 }

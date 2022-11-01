@@ -6,9 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public static class GameStateComponentsLookup {
 
     public const int AnyCoinsLeftListener = 0;
@@ -18,8 +15,8 @@ public static class GameStateComponentsLookup {
     public const int AnyTimerListener = 4;
     public const int CoinsLeft = 5;
     public const int CurrentRound = 6;
-    public const int Respawn = 7;
-    public const int HighScore = 8;
+    public const int HighScore = 7;
+    public const int Respawn = 8;
     public const int Score = 9;
     public const int Timer = 10;
 
@@ -33,8 +30,8 @@ public static class GameStateComponentsLookup {
         "AnyTimerListener",
         "CoinsLeft",
         "CurrentRound",
-        "Respawn",
         "HighScore",
+        "Respawn",
         "Score",
         "Timer"
     };
@@ -45,10 +42,10 @@ public static class GameStateComponentsLookup {
         typeof(AnyHighScoreListenerComponent),
         typeof(AnyScoreListenerComponent),
         typeof(AnyTimerListenerComponent),
-        typeof(CoinsLeftComponent),
-        typeof(CurrentRoundComponent),
-        typeof(RespawnComponent),
+        typeof(Components.CoinsLeftComponent),
+        typeof(Components.CurrentRoundComponent),
         typeof(Components.HighScoreComponent),
+        typeof(Components.RespawnComponent),
         typeof(Components.ScoreComponent),
         typeof(Components.TimerComponent)
     };

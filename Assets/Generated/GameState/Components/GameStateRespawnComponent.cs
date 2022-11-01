@@ -6,12 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public partial class GameStateEntity {
 
-    static readonly RespawnComponent respawnComponent = new RespawnComponent();
+    static readonly Components.RespawnComponent respawnComponent = new Components.RespawnComponent();
 
     public bool isRespawn {
         get { return HasComponent(GameStateComponentsLookup.Respawn); }

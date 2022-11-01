@@ -6,18 +6,15 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public partial class InputContext {
 
     public InputEntity movementEntity { get { return GetGroup(InputMatcher.Movement).GetSingleEntity(); } }
-    public MovementComponent movement { get { return movementEntity.movement; } }
+    public Components.MovementComponent movement { get { return movementEntity.movement; } }
     public bool hasMovement { get { return movementEntity != null; } }
 
     public InputEntity SetMovement(UnityEngine.Vector2 newValue) {
         if (hasMovement) {
-            throw new Entitas.EntitasException("Could not set Movement!\n" + this + " already has an entity with Components.Input.MovementComponent!",
+            throw new Entitas.EntitasException("Could not set Movement!\n" + this + " already has an entity with Components.MovementComponent!",
                 "You should check if the context already has a movementEntity before setting it or use context.ReplaceMovement().");
         }
         var entity = CreateEntity();
@@ -49,19 +46,19 @@ public partial class InputContext {
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    public MovementComponent movement { get { return (MovementComponent)GetComponent(InputComponentsLookup.Movement); } }
+    public Components.MovementComponent movement { get { return (Components.MovementComponent)GetComponent(InputComponentsLookup.Movement); } }
     public bool hasMovement { get { return HasComponent(InputComponentsLookup.Movement); } }
 
     public void AddMovement(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.Movement;
-        var component = (MovementComponent)CreateComponent(index, typeof(MovementComponent));
+        var component = (Components.MovementComponent)CreateComponent(index, typeof(Components.MovementComponent));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceMovement(UnityEngine.Vector2 newValue) {
         var index = InputComponentsLookup.Movement;
-        var component = (MovementComponent)CreateComponent(index, typeof(MovementComponent));
+        var component = (Components.MovementComponent)CreateComponent(index, typeof(Components.MovementComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

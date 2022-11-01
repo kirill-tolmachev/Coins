@@ -6,18 +6,15 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public partial class GameStateContext {
 
     public GameStateEntity coinsLeftEntity { get { return GetGroup(GameStateMatcher.CoinsLeft).GetSingleEntity(); } }
-    public CoinsLeftComponent coinsLeft { get { return coinsLeftEntity.coinsLeft; } }
+    public Components.CoinsLeftComponent coinsLeft { get { return coinsLeftEntity.coinsLeft; } }
     public bool hasCoinsLeft { get { return coinsLeftEntity != null; } }
 
     public GameStateEntity SetCoinsLeft(int newValue) {
         if (hasCoinsLeft) {
-            throw new Entitas.EntitasException("Could not set CoinsLeft!\n" + this + " already has an entity with Assets.Scripts.Components.CoinsLeftComponent!",
+            throw new Entitas.EntitasException("Could not set CoinsLeft!\n" + this + " already has an entity with Components.CoinsLeftComponent!",
                 "You should check if the context already has a coinsLeftEntity before setting it or use context.ReplaceCoinsLeft().");
         }
         var entity = CreateEntity();
@@ -49,19 +46,19 @@ public partial class GameStateContext {
 //------------------------------------------------------------------------------
 public partial class GameStateEntity {
 
-    public CoinsLeftComponent coinsLeft { get { return (CoinsLeftComponent)GetComponent(GameStateComponentsLookup.CoinsLeft); } }
+    public Components.CoinsLeftComponent coinsLeft { get { return (Components.CoinsLeftComponent)GetComponent(GameStateComponentsLookup.CoinsLeft); } }
     public bool hasCoinsLeft { get { return HasComponent(GameStateComponentsLookup.CoinsLeft); } }
 
     public void AddCoinsLeft(int newValue) {
         var index = GameStateComponentsLookup.CoinsLeft;
-        var component = (CoinsLeftComponent)CreateComponent(index, typeof(CoinsLeftComponent));
+        var component = (Components.CoinsLeftComponent)CreateComponent(index, typeof(Components.CoinsLeftComponent));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceCoinsLeft(int newValue) {
         var index = GameStateComponentsLookup.CoinsLeft;
-        var component = (CoinsLeftComponent)CreateComponent(index, typeof(CoinsLeftComponent));
+        var component = (Components.CoinsLeftComponent)CreateComponent(index, typeof(Components.CoinsLeftComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

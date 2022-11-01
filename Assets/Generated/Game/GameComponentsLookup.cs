@@ -6,18 +6,15 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Components;
-
 public static class GameComponentsLookup {
 
     public const int AnyCapturableListener = 0;
-    public const int DestroyOnRespawn = 1;
-    public const int Asset = 2;
-    public const int AutoRotate = 3;
-    public const int Capturable = 4;
-    public const int Config = 5;
-    public const int Destroyed = 6;
+    public const int Asset = 1;
+    public const int AutoRotate = 2;
+    public const int Capturable = 3;
+    public const int Config = 4;
+    public const int Destroyed = 5;
+    public const int DestroyOnRespawn = 6;
     public const int Position = 7;
     public const int Rotation = 8;
     public const int Scale = 9;
@@ -31,12 +28,12 @@ public static class GameComponentsLookup {
 
     public static readonly string[] componentNames = {
         "AnyCapturableListener",
-        "DestroyOnRespawn",
         "Asset",
         "AutoRotate",
         "Capturable",
         "Config",
         "Destroyed",
+        "DestroyOnRespawn",
         "Position",
         "Rotation",
         "Scale",
@@ -49,12 +46,12 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(AnyCapturableListenerComponent),
-        typeof(DestroyOnRespawnComponent),
         typeof(Components.AssetComponent),
         typeof(Components.AutoRotateComponent),
         typeof(Components.CapturableComponent),
         typeof(Components.ConfigComponent),
         typeof(Components.DestroyedComponent),
+        typeof(Components.DestroyOnRespawnComponent),
         typeof(Components.PositionComponent),
         typeof(Components.RotationComponent),
         typeof(Components.ScaleComponent),
